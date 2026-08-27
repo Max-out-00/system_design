@@ -5,8 +5,7 @@ private:
     string Movie_name;
     string lang;
     int duration;
-    string Release_date;    // yyyy-mm-dd
-    vector<string> time;    // hh:mm:ss 
+
 
 public:
     Movies(int Movie_Id , string Movie_name , string lang , int duration){
@@ -22,6 +21,15 @@ public:
     string getMovie(){
         return Movie_name;
     }
-    string getLang()
-    
+    string getLang(){
+        return lang;
+    }
+
+
+    void display(){
+        cout << "Movie ID: " << Movie_Id;
+        cout << "Movie Name: " << Movie_name;
+        cout << "Movie Lamguage: " << lang; 
+        cout << "Movie Duration: " <<  duration;
+    }
 }
