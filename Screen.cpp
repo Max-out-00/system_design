@@ -39,8 +39,16 @@ public:
     }
     Seat *getSeat(int seatNumber)
     {
+        for(auto seat : seats){
+            if (seat.getSeatNumber() == seatNumber)
+            {
+                return seat;
+            }
+        }   
+        return NULL;
     }
     int getScreenNumber()
     {
+        return screenNumber;
     }
-}
+};

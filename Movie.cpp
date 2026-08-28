@@ -15,7 +15,7 @@ public:
         this->duration = duration;
     }
 
-    int getID(){
+    int getMovieID(){
         return Movie_Id;
     }
     string getMovie(){
@@ -26,7 +26,7 @@ public:
     }
 
 
-    void display(){
+    void displayMovie(){
         cout << "Movie ID: " << Movie_Id;
         cout << "Movie Name: " << Movie_name;
         cout << "Movie Lamguage: " << lang; 
