@@ -1,7 +1,8 @@
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <vector>
-
 
 using namespace std;
 
@@ -12,25 +13,30 @@ private:
     string lang;
     int duration;
 
-
 public:
-    Movie(string Movie_name , string lang , int duration){
+    Movie(string Movie_name, string lang, int duration)
+    {
         this->Movie_name = Movie_name;
         this->lang = lang;
         this->duration = duration;
     }
-
-    string getMovie(){
+    int getDuration()
+    {
+        return duration;
+    }
+    string getMovie()
+    {
         return Movie_name;
     }
-    string getLang(){
+    string getLang()
+    {
         return lang;
     }
 
-
-    void displayMovie(){
+    void displayMovie()
+    {
         cout << "Movie Name: " << Movie_name;
-        cout << "Movie Lamguage: " << lang; 
-        cout << "Movie Duration: " <<  duration;
+        cout << "Movie Lamguage: " << lang;
+        cout << "Movie Duration: " << duration;
     }
 };

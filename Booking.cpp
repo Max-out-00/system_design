@@ -6,28 +6,44 @@
 
 using namespace std;
 
-class Booking {
-    private:
-        int bookingID;
-        Show *show;
-        Seat *seat;
-        int TotalAmount;
-        bool status;
-    
-    public:
-        Booking(int bookingID, Show *show, Seat *seat, int TotalAmount, bool status) {
-            this->bookingID = bookingID;
-            this->show = show;
-            this->seat = seat;
-            this->TotalAmount = TotalAmount;
-            this->status = status;
-        }
+class Booking
+{
+private:
+    int bookingID;
+    Show *show;
+    Seat *seat;
+    int TotalAmount;
+    bool status;
 
-        void displayBooking() {
-            cout << "Booking ID: " << bookingID;
-            cout << "Show ID: " << show->getShowID();
-            cout << "Seat Number: " << seat->getSeatNumber();
-            cout << "Total Amount: " << TotalAmount;
-            cout << "Booking Status: " << (status ? "Confirmed" : "Cancelled");
-        }
+public:
+    Booking(int bookingID, Show *show, Seat *seat, int TotalAmount, bool status)
+    {
+        this->bookingID = bookingID;
+        this->show = show;
+        this->seat = seat;
+        this->TotalAmount = TotalAmount;
+        this->status = status;
+    }
+
+    void displayBooking()
+    {
+        cout << "Booking ID: " << bookingID;
+        cout << "Show ID: " << show->getShowID();
+        cout << "Seat Number: " << seat->getSeatNumber();
+        cout << "Total Amount: " << TotalAmount;
+        cout << "Booking Status: " << (status ? "Confirmed" : "Cancelled");
+    }
+    int getTotalAmount()
+    {
+        return TotalAmount;
+    }
+    Show *getShow()
+    {
+        return show;
+    }
+
+    Seat *getSeat()
+    {
+        return seat;
+    }
 };

@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -34,7 +36,7 @@ public:
     {
         for (auto i : movies)
         {
-            i.displayMovie();
+            i->displayMovie();
         }
     }
     void displayScreens()
@@ -47,14 +49,14 @@ public:
     void displayShows(){
         for (auto i : shows)
         {
-            i.displayShow();
+            i->displayShow();
         }
         
     }
     Show *findShow(int showId){
          for (auto i : shows)
         {
-            if (showId == i.getShowID())
+            if (showId == i->getShowID())
             {
                 return i;
             }

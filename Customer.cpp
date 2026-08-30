@@ -1,20 +1,25 @@
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <vector>
 
 using namespace std;
 
-class Customer{
-    public:
-        string name;
-        int phoneNumber;
+class Customer
+{
+private:
+    string name;
+    int phoneNumber;
 
-    private:
-        Customer(string name, int phoneNumber){
-            this->name = name;
-            this->phoneNumber = phoneNumber;
-        }
-        void displayCustomer(){
-            cout << "Name : " << name << " | "<< " Phone Number : " << phoneNumber<< endl;
-        }
+public:
+    Customer(string name, int phoneNumber)
+    {
+        this->name = name;
+        this->phoneNumber = phoneNumber;
+    }
+    void displayCustomer()
+    {
+        cout << "Name : " << name << " | " << " Phone Number : " << phoneNumber << endl;
+    }
 };
