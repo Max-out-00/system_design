@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -10,31 +12,43 @@ enum SeatType
     GOLD,
     PLATINUM
 };
-
 class Seat
 {
 private:
     int seatNumber;
-    SeatType type; // SILVER, GOLD, PLATINUM
-    int price;
+    SeatType type;
+    bool available;   // <-- add this if missing
 
 public:
-    Seat(int seatNumber , SeatType type){
+    Seat(int seatNumber, SeatType type)
+    {
         this->seatNumber = seatNumber;
         this->type = type;
+        this->available = true;   // seats start available
     }
-    int getSeatNumber(){
+
+    bool isAvailable()
+    {
+        return available;
+    }
+
+    void bookSeat()
+    {
+        available = false;
+    }
+
+    void freeSeat()
+    {
+        available = true;
+    }
+
+    int getSeatNumber()
+    {
         return seatNumber;
     }
-    SeatType getType(){
-        return type;
-    }
-    int getPrice(){
-        return price;
-    }
-    void display(){
-        cout << "Seat Number: " << seatNumber;
-        cout << "Seat Type: " << type;
-        cout << "Seat Price: " << price;
+
+    void display()
+    {
+        cout << "Seat " << seatNumber << (available ? " [Available]" : " [Booked]");
     }
 };

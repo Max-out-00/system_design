@@ -47,7 +47,7 @@ public:
         {
             if (seat.isAvailable())
             {
-                cout <<"[" << seat.getSeatNumber() << "] ";
+                cout << "[" << seat.getSeatNumber() << "] ";
             }
             else
             {
@@ -57,11 +57,10 @@ public:
     }
     Seat *getSeat(int seatNumber)
     {
-        for (auto seat : seats)
+        for (auto &seat : seats)
         {
-            if (seat.getSeatNumber() == seatNumber)
-            {
-                return seat;
+            if (seat.getSeatNumber() == seatNumber){
+                return &seat;
             }
         }
         return NULL;
@@ -69,5 +68,9 @@ public:
     int getScreenNumber()
     {
         return screenNumber;
+    }
+    vector<Seat> getSeats()
+    {
+        return seats;
     }
 };

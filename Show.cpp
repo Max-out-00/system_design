@@ -3,6 +3,7 @@
 #include <vector>
 #include "Movie.cpp"
 #include "Screen.cpp"
+#include "ShowSeat.cpp"
 
 using namespace std;
 
@@ -61,10 +62,9 @@ public:
     }
     ShowSeat *getShowSeat(int seatNumber)
     {
-        for (auto i : showSeats)
+        for (auto &i : showSeats)
         {
-            if (i.getSeat()->getSeatNumber() == seatNumber)
-            {
+            if (i.getSeat()->getSeatNumber() == seatNumber){
                 return &i;
             }
         }

@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Movies
+class Movie
 {
 private:
     string Movie_name;
@@ -14,7 +14,7 @@ private:
 
 
 public:
-    Movies(string Movie_name , string lang , int duration){
+    Movie(string Movie_name , string lang , int duration){
         this->Movie_name = Movie_name;
         this->lang = lang;
         this->duration = duration;
