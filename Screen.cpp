@@ -1,5 +1,10 @@
 #include 'Seat.cpp'
+#include <iostream>
+#include <string>
+#include <vector>
 #include vector;
+
+using namespace std;
 
 class Screen
 {
@@ -37,14 +42,29 @@ public:
             seat.display();
         }
     }
+    void displayAvalableSeats()
+    {
+        for (Seat &seat : seats)
+        {
+            if (seat.isAvailable())
+            {
+                cout <<"[" << seat.getSeatNumber() << "] ";
+            }
+            else
+            {
+                cout << "[X] ";
+            }
+        }
+    }
     Seat *getSeat(int seatNumber)
     {
-        for(auto seat : seats){
+        for (auto seat : seats)
+        {
             if (seat.getSeatNumber() == seatNumber)
             {
                 return seat;
             }
-        }   
+        }
         return NULL;
     }
     int getScreenNumber()

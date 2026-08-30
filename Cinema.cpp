@@ -1,3 +1,11 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include "Screen.cpp"
+#include "Movie.cpp"
+#include "Show.cpp"
+
+using namespace std;
 class Cinema
 {
 private:
@@ -39,19 +47,9 @@ public:
     void displayShows(){
         for (auto i : shows)
         {
-            i.displayShow() << endl;
+            i.displayShow();
         }
         
-    }
-    Movie *findMovie(int movieId){
-        for (auto i : movies)
-        {
-            if (movieId == i.getMovieID())
-            {
-                return i;
-            }
-        }
-        return NULL;
     }
     Show *findShow(int showId){
          for (auto i : shows)
