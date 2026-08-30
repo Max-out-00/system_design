@@ -12,4 +12,4 @@ class BookingService{
             bookings[customer] = booking;
         }
 
-}
+};

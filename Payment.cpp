@@ -22,7 +22,7 @@ class Upi : public PaymentType {
         int getType() {
             return 1;
         }
-}
+};
 
 class card : public PaymentType{
 
@@ -48,7 +48,7 @@ class card : public PaymentType{
         int getType() {
             return 2;
         }
-}
+};
 
 class Cash : public PaymentType {
     public:
@@ -61,4 +61,4 @@ class Cash : public PaymentType {
         int getType() {
             return 3;
         }
-}
+};

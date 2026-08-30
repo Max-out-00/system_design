@@ -33,4 +33,4 @@ public:
         cout << "Movie Lamguage: " << lang; 
         cout << "Movie Duration: " <<  duration;
     }
-}
+};

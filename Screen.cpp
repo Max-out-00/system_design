@@ -1,8 +1,7 @@
-#include 'Seat.cpp'
 #include <iostream>
 #include <string>
 #include <vector>
-#include vector;
+#include "Seat.cpp"
 
 using namespace std;
 

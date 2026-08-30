@@ -5,6 +5,7 @@
 #include "Seat.cpp"
 
 using namespace std;
+
 class Booking {
     private:
         int bookingID;

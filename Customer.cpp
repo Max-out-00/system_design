@@ -17,4 +17,4 @@ class Customer{
         void displayCustomer(){
             cout << "Name : " << name << " | "<< " Phone Number : " << phoneNumber<< endl;
         }
-}
+};

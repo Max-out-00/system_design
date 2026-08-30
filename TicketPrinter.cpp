@@ -30,3 +30,4 @@ public:
             payment->pay(booking->getTotalAmount(), "Cash") << endl;
         }
     }
+};

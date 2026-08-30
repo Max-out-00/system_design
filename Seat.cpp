@@ -1,3 +1,9 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
 enum SeatType
 {
     SILVER,
@@ -31,4 +37,4 @@ public:
         cout << "Seat Type: " << type;
         cout << "Seat Price: " << price;
     }
-}
+};

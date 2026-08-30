@@ -23,4 +23,4 @@ class ShowSeat{
         void releaseSeat() {
             available = true;
         }
-}
+};
